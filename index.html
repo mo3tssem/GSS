@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<head>
+
+
+    <meta charset="utf-8">
+    <title>Places App</title>
+
+    <!-- Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/MetroJs.js"></script>
+    <script src="js/jquerymobile.js"></script>
+    <script src="js/modernizr.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.0.1.css">
+
+    <link rel="stylesheet" href="css/MetroJs.css">
+    <link rel="stylesheet" href="css/css.css">
+    <script>
+        $(document).ready(function () {
+            $('body').css('display', 'none'); $('body').fadeIn(1000);
+
+            $('#tile1').click(function () { event.preventDefault(); newLocation = this.href; $('body').fadeOut(1000, newpage); });
+            function newpage() { window.location = "go.html"; }
+        });
+
+       
+    </script>
+    <style>
+        * {
+            border:none;
+        }
+        #scroll {
+         width:100%;
+height:640px;
+overflow:scroll;
+        }
+            #scroll img {
+                width:100%;
+               
+            }
+    </style>
+</head>
+
+<body>
+
+    <div id="metro" data-role="page">
+
+        <div class="red" style="background-image: url('images/BG.jpg'); background-size: contain; background-repeat: repeat; width: 100%; height: 100%;">
+            <div id="one" data-mode="carousel" data-start-now="true" class="live-tile" data-direction="horizontal" data-delay="3000">
+                <div>
+
+
+                    <img class="full" src="images/0.jpg" alt="1" />
+
+                </div>
+            </div>
+            <div id="tile1" class="live-tile" data-delay="3500" data-initdelay="500">
+                <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+                <div>
+                    <a href="#">
+                        <img class="full" src="images/01.jpg" alt="first" />
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img class="full" src="images/01-1.jpg" alt="first" /></a>
+                </div>
+            </div>
+
+            <div id="two_2" data-mode="carousel" data-start-now="true" class="live-tile" data-direction="horizontal" data-delay="3000">
+                <div>
+                    <img class="full" src="images/02-1.jpg" alt="1" />
+                </div>
+                <div>
+                    <img class="full" src="images/02.jpg" alt="2" />
+                </div>
+            </div>
+
+            <div id="one_1" data-mode="carousel" data-start-now="true" class="live-tile" data-direction="horizontal" data-delay="3000">
+                <div>
+                    <a href="#dec">
+                        <img class="full" src="images/03-1.jpg" alt="1" />
+                    </a>
+                </div>
+                <div>
+
+                    <a href="#dec">
+                        <img class="full" src="images/03.jpg" alt="2" />
+                    </a>
+                </div>
+            </div>
+
+            <div id="two_3" data-mode="carousel" data-start-now="true" class="live-tile" data-direction="horizontal" data-delay="3000">
+                <div>
+                    <a href="#about" data-transition="pop">
+                        <img class="full" src="images/04-1.jpg" alt="1" />
+                    </a>
+                </div>
+                <div>
+                    <a href="#about" data-transition="pop">
+                        <img class="full" src="images/04.jpg" alt="2" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="about" data-role="page" style="background-image: url('images/About us.jpg'); background-size: cover; background-repeat: no-repeat; width: 100%; height: 100%;">
+    </div>
+
+
+    <div id="dec" data-role="page">
+
+        <div id="scroll">
+                    <img src="images/manual.jpg"  />
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        $("#two_3").liveTile({ mode: 'slide', frontIsRandom: true });
+        $("#one").liveTile({ mode: 'slide', frontIsRandom: false, fadeSwap: true, alwaysSwapFront: true });
+        $("#two_2").liveTile();
+        $("#one_1").liveTile();
+        $("#tile1").liveTile({ mode: 'flip', frontIsRandom: false });
+    </script>
+
+</body>
+</html>
+

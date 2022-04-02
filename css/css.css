@@ -1,0 +1,61 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+	direction: rtl;
+  overflow-y: auto;
+  overflow-x:hidden; 
+  -webkit-transition-property: top, bottom;
+          transition-property: top, bottom;
+  -webkit-transition-duration: .2s, .2s;  
+          transition-duration: .2s, .2s;  
+  -webkit-transition-timing-function: linear, linear;
+          transition-timing-function: linear, linear;
+  -webkit-overflow-scrolling: touch;
+	
+
+}
+
+
+#one {
+  
+   width: 98%;
+height: 24%;
+}
+
+#one_1 {
+    height: 23%;
+    width: 48%;
+}
+
+#tile1 {
+   width: 48%;
+height: 46%;
+}
+
+#two_1 {
+    height: 250px;
+}
+
+#two_2 {
+    height: 22%;
+    width: 48%;
+}
+
+#two_3 {
+   width: 98%;
+height: 27%;
+}
+
+.red {
+    position: fixed;
+}
